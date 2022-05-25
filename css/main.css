@@ -159,21 +159,36 @@ iframe {
 .container-login100 {
   width: 100%;  
   min-height: 100vh;
-  float: left;
-  background: #E97211;
-  background: -webkit-linear-gradient(-135deg, #E97211, #F1944A);
-  background: -o-linear-gradient(-135deg, #E97211, #F1944A);
-  background: -moz-linear-gradient(-135deg, #E97211, #F1944A);
-  background: linear-gradient(-135deg, #E97211, #F1944A);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #0000b3;
+  background: -webkit-linear-gradient(-135deg, #2b00c4, #4158d0);
+  background: -o-linear-gradient(-135deg, #3000aa, #4158d0);
+  background: -moz-linear-gradient(-135deg, #13008f, #4158d0);
+  background: linear-gradient(-135deg, #00238a, #4158d0);
 }
 
 .wrap-login100 {
-  background: #101A37;
-  border-bottom-left-radius: 75px;
-  border-top-left-radius: 75px;
-  float: right;
-  width: 430px;
-  padding: 100px 50px 10px 75px;
+  width: 960px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 177px 130px 33px 95px;
 }
 
 /*------------------------------------------------------------------
@@ -191,18 +206,18 @@ iframe {
 [  ]*/
 .login100-form {
   width: 290px;
-  height: 400px;
 }
 
 .login100-form-title {
   font-family: Poppins-Bold;
-  font-size: 35px;
-  color: #fff;
+  font-size: 24px;
+  color: #333333;
   line-height: 1.2;
   text-align: center;
+
   width: 100%;
   display: block;
-  padding-bottom: 20px;
+  padding-bottom: 54px;
 }
 
 
@@ -211,17 +226,17 @@ iframe {
   position: relative;
   width: 100%;
   z-index: 1;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .input100 {
   font-family: Poppins-Medium;
   font-size: 15px;
   line-height: 1.5;
-  color: #545454;
+  color: #666666;
+
   display: block;
-  margin: auto;
-  width: 60%;
+  width: 100%;
   background: #e6e6e6;
   height: 50px;
   border-radius: 25px;
@@ -238,10 +253,8 @@ iframe {
   bottom: 0;
   left: 0;
   z-index: -1;
-  width: 60%;
-  margin: auto;
-  height: 50px;
-  padding: 0 30px 0 68px;
+  width: 100%;
+  height: 100%;
   box-shadow: 0px 0px 0px 0px;
   color: rgba(255, 102, 0, 0.8);
 }
@@ -250,7 +263,7 @@ iframe {
   -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
   animation: anim-shadow 0.5s ease-in-out forwards;
 }
-/* 
+
 @-webkit-keyframes anim-shadow {
   to {
     box-shadow: 0px 0px 70px 25px;
@@ -263,7 +276,7 @@ iframe {
     box-shadow: 0px 0px 70px 25px;
     opacity: 0;
   }
-} */
+}
 
 .symbol-input100 {
   font-size: 15px;
@@ -298,7 +311,7 @@ iframe {
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-login100-form-btn {
-  width: 60%;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -306,8 +319,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 50px;
-  margin-left: 20%;
+  padding-top: 20px;
 }
 
 [ Button ]*/
@@ -325,16 +337,15 @@ iframe {
 
 .login100-form-btn {
   font-family: Montserrat-Bold;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.5;
-  font-weight: bold;
-  color: #545454;
+  color: #fff;
   text-transform: uppercase;
 
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #fff;
+  background: #ff751a;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -355,9 +366,8 @@ iframe {
   font-size: 15px;
   line-height: 1.5;
   color: #fff;
-  right: 0;
   text-transform: uppercase;
-  position: absolute;
+
   width: -50%;
   height: 30px;
   border-radius: 25px;
@@ -384,7 +394,7 @@ iframe {
 
 
 
-/* @media (max-width: 992px) {
+@media (max-width: 992px) {
   .wrap-login100 {
     padding: 177px 90px 33px 85px;
   }
@@ -416,7 +426,7 @@ iframe {
   .wrap-login100 {
     padding: 100px 15px 33px 15px;
   }
-} */
+}
 
 
 /*------------------------------------------------------------------
@@ -479,112 +489,9 @@ iframe {
   opacity: 1;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 992px) {
   .alert-validate::before {
     visibility: visible;
     opacity: 1;
   }
-  .container-logo{
-    display: none;
-  }
-  .logo-defesa{
-    display: none;
-  }
-  .body{
-    display: none;
-  }
-  .card-login{
-    flex:1;
-  }
-  .logout100-form-btn{
-    right: 0;
-    bottom: 55px;
-  }
-}
-.container-logo{
-  flex: 1;
-  padding-left: 25%;
-}
-
-.logo{
-  width: 250px;
-  height: 250px;
-  float: left;
-  margin-top: 22%;
-}
-
-.logo-gov{
-  width: 75%;
-  height: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 15px;
-}
-
-.body{
-  background-image: linear-gradient(#E97211, #F1944A);
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-.container-logo{
-  display: flex;
-  align-items: center;
-}
-
-.logo-defesa{
-  width: 250px;
-  height: 250px;
-}
-
-.card-login{
-  background-color: #101A37;
-  width: 35%;
-  height: 100vh;
-  float: right;
-  border-bottom-left-radius: 50px;
-  border-top-left-radius: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-detail{
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.input-icons i {
-  position: absolute;
-}
-  
-.input-icons {
-  margin-bottom: 10px;
-}
-  
-.icon {
-  padding: 13px;
-  color: #545454;
-  margin-left: 5%;
-}
-  
-.input-field {
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  border-radius: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.img-top{
-  width: 250px;
-  height: 250px;
-  margin-bottom: -150px;
 }
